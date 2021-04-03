@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    x:Class="XamarinFormsCookbook.Views.DatePickerMaximumDateCurrentDate.DatePickerMaximumDateCurrentDateControl">
+
+    <ContentView.Content>
+
+        <Frame BackgroundColor="CornflowerBlue" HasShadow="False" VerticalOptions="Start">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                <Label Text="Select date" TextColor="White" VerticalTextAlignment="Center"/>
+
+                <DatePicker MaximumDate="{x:Static sys:DateTime.UtcNow}"
+                            Format="dd.MM.yyyy"
+                            VerticalOptions="Start"
+                            />
+            </StackLayout>
+        </Frame>
+
+    </ContentView.Content>
+</ContentView>

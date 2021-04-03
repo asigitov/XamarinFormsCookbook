@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsCookbook.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout>
+        <StackLayout.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="10,60,10,0"/>
+                <On Platform="Android" Value="10,0,10,0"/>
+            </OnPlatform>
+        </StackLayout.Margin>
+
+        <Label Text="Xamarin.Forms Recipes"
+               FontSize="Large"
+               VerticalOptions="Start"
+               HorizontalOptions="StartAndExpand"
+               VerticalTextAlignment="Start"
+               HorizontalTextAlignment="Start"
+               Margin="0,0,0,10"
+               />
+
+        <Frame BackgroundColor="CornflowerBlue" HasShadow="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="01" TextColor="White"/>
+
+                <Label Text="Set DatePicker's MaximumDate to CurrentDate in XAML"
+                       Grid.Column="1"
+                       TextColor="White"/>
+            </Grid>
+
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+
+        </Frame>
+
+
+    </StackLayout>
+
+</ContentPage>
